@@ -100,8 +100,8 @@ export default class CheckBox extends Component {
       ? '#CCC'
       : '#555';
     var source = this.props.isChecked
-      ? require('ReactNativeSmokeAlarms/App/Assets/icon/ic_check_box.png')
-      : require('ReactNativeSmokeAlarms/App/Assets/icon/ic_check_box_outline_blank.png');
+      ? require('./img/ic_check_box.png')
+      : require('./img/ic_check_box_outline_blank.png');
 
     return (
       <View style={{
