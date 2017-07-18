@@ -1,12 +1,8 @@
 # react-native-check-box
 
-[ ![release](https://img.shields.io/github/release/crazycodeboy/react-native-check-box.svg?maxAge=2592000?style=flat-square)](https://github.com/opp100/react-native-check-box)
-[ ![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen.svg)](https://github.com/crazycodeboy/react-native-check-box/pulls)
-[![License MIT](http://img.shields.io/badge/license-MIT-orange.svg?style=flat)](https://raw.githubusercontent.com/crazycodeboy/react-native-check-box/master/LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen.svg)](https://github.com/crazycodeboy/react-native-check-box/pulls) [![License MIT](http://img.shields.io/badge/license-MIT-orange.svg?style=flat)](https://raw.githubusercontent.com/crazycodeboy/react-native-check-box/master/LICENSE)
 
-
-
-Checkbox component for react native, it works on iOS and Android.
+Checkbox component for react native, it works on iOS and Android. And image option for label.
 
 ## Content
 
@@ -18,21 +14,22 @@ Checkbox component for react native, it works on iOS and Android.
 
 ## Installation
 
-* 1.Run `npm i react-native-check-box@https://github.com/opp100/react-native-check-box.git --save`
-* 2.`import CheckBox from 'react-native-check-box'`    
+- 1.Run `npm i react-native-check-box@https://github.com/opp100/react-native-check-box.git --save`
+- 2.`import CheckBox from 'react-native-check-box'`
 
-## Demo  
-* [Examples](https://github.com/crazycodeboy/react-native-check-box/tree/master/examples)
+## Demo
+
+- [Examples](https://github.com/crazycodeboy/react-native-check-box/tree/master/examples)
 
 ![Screenshots](https://raw.githubusercontent.com/crazycodeboy/react-native-check-box/master/examples/Screenshots/react-native-check-box-screenshots.gif)
 
-## Getting started  
+## Getting started
 
-Add `react-native-check-box` to your js file.   
+Add `react-native-check-box` to your js file.
 
-`import CheckBox from 'react-native-check-box'`  
+`import CheckBox from 'react-native-check-box'`
 
-Inside your component's render method, use CheckBox:   
+Inside your component's render method, use CheckBox:
 
 ```javascript
 <CheckBox
@@ -43,10 +40,9 @@ Inside your component's render method, use CheckBox:
 />;
 ```
 
-Then you can use it like this:   
+Then you can use it like this:
 
-
-### Basic usage  
+### Basic usage
 
 ```javascript
  <CheckBox
@@ -55,11 +51,13 @@ Then you can use it like this:
      isChecked={data.checked}
      leftText={leftText}
  />;
- ```
+```
 
- ```javascript
+### advance usage
+```javascript
  <CheckBox
    style={{...containerStyle}}
+   disabled={true}
    isReverse={true}
    onClick={() => {
    this.state.check = !this.state.check;
@@ -69,9 +67,9 @@ Then you can use it like this:
    isChecked={this.state.check}
    leftText='TextLabel'
    leftTextStyle={{...textStyle}}/>
- ```
+```
 
-### Custom CheckBox   
+### Custom CheckBox
 
 ```javascript
 renderCheckBox(data) {
@@ -89,30 +87,27 @@ renderCheckBox(data) {
 ```
 
 ```javascript
-
 ```
 
-**More Usage:**    
+**More Usage:**
 
 [GitHubPopular](https://github.com/crazycodeboy/GitHubPopular/blob/develop/js/page/my/CustomKeyPage.js)
 
-
-
 ## API
 
-
-Props              | Type     | Optional | Default     | Description
------------------ | -------- | -------- | ----------- | -----------
-style  | View.propTypes.style  | true |   |   Custom style checkbox
-leftText | React.PropTypes.string |true |   | Custom left Text
-leftTextStyle  |  Text.propTypes.style | true |  | Custom left Text style
-rightText | React.PropTypes.string |true |   | Custom right Text
-rightTextView | React.PropTypes.element | true |   | Custom right TextView
-rightTextStyle  | Text.propTypes.style | true |  | Custom right Text style
-checkedImage  |  React.PropTypes.element  | true  | Default image | Custom  checked Image
-unCheckedImage  |  React.PropTypes.element  | true  |  Default image  | Custom  unchecked Image
-isChecked  |  React.PropTypes.bool |  false  |  false  | checkbox checked state
-onClick   |  React.PropTypes.func.isRequired |  false  |  | callback  function
+Props          | Type                            | Optional | Default       | Description
+-------------- | ------------------------------- | -------- | ------------- | -----------------------
+style          | View.propTypes.style            | true     |               | Custom style checkbox
+disabled       | View.propTypes.bool             | true     | false         | disabled click event
+isReverse      | View.propTypes.bool             | true     | false         | reverse the left and right
+leftText       | React.PropTypes.string          | true     |               | Custom left Text
+rightText      | React.PropTypes.string          | true     |               | Custom right Text
+leftImage      | React.PropTypes.element         | true     |               | Custom left Image
+leftImageStyle | Text.propTypes.style            | true     |               | Custom left Image style
+checkedImage   | React.PropTypes.element         | true     | Default image | Custom checked Image
+unCheckedImage | React.PropTypes.element         | true     | Default image | Custom unchecked Image
+isChecked      | React.PropTypes.bool            | false    | false         | checkbox checked state
+onClick        | React.PropTypes.func.isRequired | false    |               | callback function
 
 ## Contribution
 
@@ -120,6 +115,6 @@ Issues are welcome. Please add a screenshot of bug and code snippet. Quickest wa
 
 Pull requests are welcome. If you want to change API or making something big better to create issue and discuss it first.
 
----
+--------------------------------------------------------------------------------
 
 **MIT Licensed**
