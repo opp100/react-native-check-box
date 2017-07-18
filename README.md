@@ -1,8 +1,7 @@
 # react-native-check-box
 
-[ ![release](https://img.shields.io/github/release/crazycodeboy/react-native-check-box.svg?maxAge=2592000?style=flat-square)](https://github.com/crazycodeboy/react-native-check-box/releases)
+[ ![release](https://img.shields.io/github/release/crazycodeboy/react-native-check-box.svg?maxAge=2592000?style=flat-square)](https://github.com/opp100/react-native-check-box)
 [ ![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen.svg)](https://github.com/crazycodeboy/react-native-check-box/pulls)
-[ ![NPM version](http://img.shields.io/npm/v/react-native-check-box.svg?style=flat)](https://www.npmjs.com/package/react-native-check-box)
 [![License MIT](http://img.shields.io/badge/license-MIT-orange.svg?style=flat)](https://raw.githubusercontent.com/crazycodeboy/react-native-check-box/master/LICENSE)
 
 
@@ -19,7 +18,7 @@ Checkbox component for react native, it works on iOS and Android.
 
 ## Installation
 
-* 1.Run `npm i react-native-check-box --save`
+* 1.Run `npm i react-native-check-box@https://github.com/opp100/react-native-check-box.git --save`
 * 2.`import CheckBox from 'react-native-check-box'`    
 
 ## Demo  
@@ -58,6 +57,20 @@ Then you can use it like this:
  />;
  ```
 
+ ```javascript
+ <CheckBox
+   style={{...containerStyle}}
+   isReverse={true}
+   onClick={() => {
+   this.state.check = !this.state.check;
+ }}
+   leftImage={require('./Assets/icon/icon.png')}
+   leftImageStyle={{...iconStyle}}
+   isChecked={this.state.check}
+   leftText='TextLabel'
+   leftTextStyle={{...textStyle}}/>
+ ```
+
 ### Custom CheckBox   
 
 ```javascript
@@ -73,6 +86,10 @@ renderCheckBox(data) {
             unCheckedImage={<Image source={require('../../page/my/img/ic_check_box_outline_blank.png')} style={this.props.theme.styles.tabBarSelectedIcon}/>}
         />);
 }
+```
+
+```javascript
+
 ```
 
 **More Usage:**    
