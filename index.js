@@ -112,8 +112,8 @@ export default class CheckBox extends Component {
           source={source}
           style={{
           tintColor: color,
-          height: height / 30,
-          width: height / 30
+          height: height / 24,
+          width: height / 24
         }}/>
       </View>
     );
@@ -155,7 +155,8 @@ export default class CheckBox extends Component {
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    alignItems: 'center'
+    alignItems: 'center',
+    justifyContent:'center'
   },
   leftText: {},
   rightText: {
