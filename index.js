@@ -29,17 +29,6 @@ export default class CheckBox extends Component {
 
   static propTypes = {
     ...View.propTypes,
-    leftText: React.PropTypes.string,
-    leftTextView: React.PropTypes.element,
-    rightText: React.PropTypes.string,
-    leftTextStyle: Text.propTypes.style,
-    rightTextView: React.PropTypes.element,
-    rightTextStyle: Text.propTypes.style,
-    checkedImage: React.PropTypes.element,
-    unCheckedImage: React.PropTypes.element,
-    onClick: React.PropTypes.func.isRequired,
-    isChecked: React.PropTypes.bool,
-    checkBoxColor: React.PropTypes.string
   }
 
   _renderLeft() {
